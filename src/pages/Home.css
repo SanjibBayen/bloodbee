@@ -1,0 +1,29 @@
+.home-container {
+    background-color: #f8f9fa;
+  }
+  
+  .home-logo {
+    height: 150px;
+    width: auto;
+    margin-bottom: 20px;
+  }
+  
+  .home-bg-image {
+    background-image: url('../assets/img/background.jpg'); /* Ensure you have a background image */
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+  }
+  
+  .home-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .home-card h1 {
+    color: #dc3545; /* Bootstrap danger color */
+  }
+  
+  .home-card h5 {
+    color: #343a40; /* Bootstrap dark color */
+  }
