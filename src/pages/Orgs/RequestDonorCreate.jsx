@@ -9,7 +9,7 @@ const RequestDonorCreate = ({ donorDetails, staffemail }) => {
     };
   return (
     <div>
-      <Navigation username={'Mike Junior'} homeColor={'primary'}/>
+      <Navigation username={donor.full_name} homeColor={'primary'}/>
 
       <div id="carouselExample" className="carousel">
         <div className="carousel-inner">

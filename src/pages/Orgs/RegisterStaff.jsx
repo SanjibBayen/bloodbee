@@ -4,8 +4,8 @@ import { lable, logo1 } from '../../assets/img';
 
 const RegisterStaff = () => {
   const handleSubmit = (event) => {
-    event.preventDefault(); // Prevent the default form submission behavior
-    // Optionally, you can add any other logic here, such as showing a message to the user
+    event.preventDefault(); 
+    
 };
   return (
     <div>

@@ -1,0 +1,66 @@
+.blood-donation-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .blood-btn {
+    border: 2px solid #dc3545;
+    color: #dc3545;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 22px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .blood-btn:hover, .active-btn {
+    background: #dc3545;
+    color: #fff;
+  }
+  
+  .blood-info-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .receive-box, .donate-box {
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .receive-box {
+    background: #fed8b1;
+  }
+  
+  .donate-box {
+    background: #add8e6;
+  }
+  
+  .icon-img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .blood-img {
+    width: 250px;
+  }
+
+  .custom-btn {
+    padding: 1rem 2rem; /* Increase padding for larger buttons */
+    font-size: 1.5rem; /* Increase font size */
+    border-radius: 0.5rem; /* Optional: Adjust border radius */
+  }
+
+  .active-btn {
+    background-color: #dc3545; /* Active button background color */
+    color: #fff; /* Active button text color */
+  }

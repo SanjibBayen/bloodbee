@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom';
 
 function LoginStaff() {
   const handleSubmit = (event) => {
-    event.preventDefault(); // Prevent the default form submission behavior
-    // Optionally, you can add any other logic here, such as showing a message to the user
+    event.preventDefault();
 };
   return (
     <div>
@@ -40,7 +39,7 @@ function LoginStaff() {
                           <div className="form-check d-flex justify-content-center mb-5">
                             <input className="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
                             <label className="form-check-label" htmlFor="form2Example3">
-                              I agree all statements in <a href="#!">Terms of service</a>
+                              I agree all statements in <a href="#">Terms of service</a>
                             </label>
                           </div>
                           <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">

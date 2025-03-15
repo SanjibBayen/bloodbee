@@ -13,9 +13,9 @@ const Navbar = ({ username,homeColor,appointmentsColor,profileColor, }) => {
   return (
     <div>
       <div className="text-center p-3 container-md">
-        <Link to={"/home-donor"}>
+        {/* <Link to={"/home-donor"}>
           <img src={logo1} className="h-25 w-75 rounded" alt="Company Logo" />
-        </Link>
+        </Link> */}
       </div>
       <nav className="navbar navbar-expand-lg bg-primary">
       <div className="container-fluid">
