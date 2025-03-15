@@ -10,9 +10,6 @@ const RegisterDonor = () => {
   return (
     <div>
       <div className="text-center p-3 container-md">
-        <Link to="/">
-          <img src={logo1} className="h-25 w-75 rounded" alt="..." />
-        </Link>
       </div>
       <div id="intro-example" className="text-center bg-image align-items-center">
         <section>
