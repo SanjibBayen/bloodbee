@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, Footer } from "../components/Elements";
+import { NavbarHome, Footer } from "../components/Elements";
 import Services from "../pages/Services";
 import BloodDonation from "../pages/BloodDonation";
 import "./Home.css";
@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <div className="home">
       {/* Navbar */}
-      <Navbar username="John Doe" appointmentsColor="primary" />
+      <NavbarHome />
       
       {/* Main Content */}
       <div className="container text-center p-4">

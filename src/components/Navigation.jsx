@@ -1,9 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {Dropdown} from './Elements';
-import { logo1 } from '../assets/img';
 
-const Navigation = ({username,homeColor,sentRequestsColor,acceptedRequestsColor,aboutTeamColor,contactTeamColor,profileColor,}) => {
+const Navigation = ({username,homeColor,sentRequestsColor,acceptedRequestsColor,profileColor,}) => {
     const defaultTextColor = "white"; 
     const handleSubmit = (event) => {
       event.preventDefault();
