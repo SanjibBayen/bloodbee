@@ -35,7 +35,7 @@ const Home = () => {
       {/* Blood Donation Info Section */}
       
       <BloodDonation />
-      <div className="content"></div>
+      <div className="content">hi</div>
       {/* Footer */}
       <Footer />
     </div>
