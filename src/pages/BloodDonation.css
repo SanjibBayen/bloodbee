@@ -1,6 +1,6 @@
 .blood-donation-container {
     background: #fff;
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
   }
   
@@ -9,13 +9,14 @@
     color: #dc3545;
     background: #fff;
     border-radius: 10px;
-    padding: 10px 20px;
+    padding: 30px 40px;
     font-size: 22px;
     transition: all 0.3s ease-in-out;
   }
   
   .blood-btn:hover, .active-btn {
-    background: #dc3545;
+    background: #dc354689;
+    border: 2px solid #dc3545;
     color: #fff;
   }
   

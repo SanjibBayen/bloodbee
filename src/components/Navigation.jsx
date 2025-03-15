@@ -12,9 +12,9 @@ const Navigation = ({username,homeColor,sentRequestsColor,acceptedRequestsColor,
   return (
     <div>
     <div className="text-center p-3 container-md">
-      <Link to={"/request-donor"}>
+      {/* <Link to={"/request-donor"}>
         <img src={logo1} className="h-25 w-75 rounded" alt="Company Logo" />
-      </Link>
+      </Link> */}
     </div>
     <nav className="navbar navbar-expand-lg bg-primary">
       <div className="container-fluid">
