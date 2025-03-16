@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 const NavbarHome = ({ username }) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow">
-      <div className="container">
+      <div className="container d-flex justify-content-center">
         {/* Logo / Brand */}
-        <Link className="navbar-brand fw-bold text-white" to="/">
+        <Link className="navbar-brand fw-bold text-white mx-auto" to="/">
           <i className="bi bi-droplet-fill me-2"></i>LifeFlow
         </Link>
 
@@ -24,8 +24,8 @@ const NavbarHome = ({ username }) => {
         </button>
 
         {/* Navigation Links */}
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav me-auto">
+        <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul className="navbar-nav">
             <li className="nav-item">
               <Link className="nav-link text-white" to="/">
                 <i className="fa-solid fa-house me-1"></i> Home
@@ -49,7 +49,7 @@ const NavbarHome = ({ username }) => {
           </ul>
 
           {/* Search Bar */}
-          <form className="d-flex me-3">
+          {/* <form className="d-flex me-3">
             <input
               className="form-control me-2"
               type="search"
@@ -59,10 +59,10 @@ const NavbarHome = ({ username }) => {
             <button className="btn btn-light text-primary" type="submit">
               <i className="fa-solid fa-search"></i>
             </button>
-          </form>
+          </form> */}
 
           {/* Profile Dropdown */}
-          <div className="nav-item dropdown">
+          {/* <div className="nav-item dropdown">
             <button
               className="nav-link dropdown-toggle btn btn-link text-white"
               id="profileDropdown"
@@ -92,7 +92,7 @@ const NavbarHome = ({ username }) => {
                 </>
               )}
             </ul>
-          </div>
+          </div> */}
         </div>
       </div>
     </nav>
