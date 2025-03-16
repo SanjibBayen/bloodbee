@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <div className="home-container">
       {/* Navbar */}
-      <NavbarHome />
+      {/* <NavbarHome /> */}
 
       {/* Main Content */}
       <div className="home-content container text-center">
