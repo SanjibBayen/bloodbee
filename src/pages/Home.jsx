@@ -12,7 +12,7 @@ const Home = () => {
 
       {/* Main Content */}
       <div className="home-content container text-center">
-        <h1 className="home-title">
+        <h1 className="home-title text-muted">
           One Blood Donation Can Save <span className="highlight">Three</span> Lives
         </h1>
 
