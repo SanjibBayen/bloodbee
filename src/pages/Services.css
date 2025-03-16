@@ -16,7 +16,7 @@
 
 /* Service Image */
 .service-card img {
-  width: 70px;
+  width: 60px;
   margin: 20px auto;
 }
 
@@ -38,7 +38,7 @@
   background-color: #dc3545;
   color: white;
   font-size: 1rem;
-  padding: 10px 15px;
+  padding: 10px 10px;
   border-radius: 8px;
   transition: background 0.3s ease;
 }

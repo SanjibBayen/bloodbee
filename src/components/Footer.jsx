@@ -2,10 +2,10 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="text-center text-lg-start bg-body-tertiary text-muted">
-      <div className="text-center p-4" style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
-        <p>© {new Date().getFullYear()} Bloodbee. All rights reserved.</p>
-        <p>Made with ❤️ to save lives.</p>
+    <footer className="text-center py-3" style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
+      <div className="container">
+        <p className="mb-1  text-muted">© {new Date().getFullYear()} Bloodbee. All rights reserved.</p>
+        <p className="mb-0 fw-bold text-muted">Made with <span className="text-danger">❤️</span> to save lives.</p>
       </div>
     </footer>
   );
