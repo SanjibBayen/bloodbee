@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const NavbarHome = ({ username }) => {
+const NavbarHome = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow">
-      <div className="container d-flex justify-content-center">
-        {/* Logo / Brand */}
-        <Link className="navbar-brand fw-bold text-white mx-auto" to="/">
+      <div className="container d-flex flex-row align-items-center">
+        {/* Logo */}
+        <Link className="navbar-brand fw-bold text-white" to="/">
           <i className="bi bi-droplet-fill me-2"></i>LifeFlow
         </Link>
 
@@ -24,7 +24,7 @@ const NavbarHome = ({ username }) => {
         </button>
 
         {/* Navigation Links */}
-        <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <div className="collapse navbar-collapse justify-content-center " id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
               <Link className="nav-link text-white" to="/">
@@ -43,56 +43,10 @@ const NavbarHome = ({ username }) => {
             </li>
             <li className="nav-item">
               <Link className="nav-link text-white" to="/about">
-                <i className="fa-solid fa-info-circle me-1"></i> About
+                <i class="fa-solid fa-info-circle me-1"></i> About
               </Link>
             </li>
           </ul>
-
-          {/* Search Bar */}
-          {/* <form className="d-flex me-3">
-            <input
-              className="form-control me-2"
-              type="search"
-              placeholder="Search donors"
-              aria-label="Search"
-            />
-            <button className="btn btn-light text-primary" type="submit">
-              <i className="fa-solid fa-search"></i>
-            </button>
-          </form> */}
-
-          {/* Profile Dropdown */}
-          {/* <div className="nav-item dropdown">
-            <button
-              className="nav-link dropdown-toggle btn btn-link text-white"
-              id="profileDropdown"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              <i className="fa-solid fa-user me-1"></i> {username ? username : "Guest"}
-            </button>
-            <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
-              {username ? (
-                <>
-                  <li>
-                    <Link className="dropdown-item" to="/profile">My Account</Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item text-danger" to="/logout">Log Out</Link>
-                  </li>
-                </>
-              ) : (
-                <>
-                  <li>
-                    <Link className="dropdown-item" to="/login">Login</Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="/register">Sign Up</Link>
-                  </li>
-                </>
-              )}
-            </ul>
-          </div> */}
         </div>
       </div>
     </nav>
