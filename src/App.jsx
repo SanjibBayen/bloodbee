@@ -11,6 +11,7 @@ import { AcceptRequests, LoginStaff, ProfileStaff, RegisterStaff, RequestDonor, 
 
 import { donorData, dummyData, acceptData, profileData, sampleData, tryData } from "./constraints/Data";
 import NavbarHome from "./components/navbarHome"; 
+import { Footer } from './components/Elements';
 
 const Layout = () => {
   const location = useLocation(); // Get the current route
@@ -35,6 +36,8 @@ const Layout = () => {
           <Route path="/register-staff" element={<RegisterStaff />} />
         </Routes>
       </div>
+      {/* Footer */}
+      <Footer />
     </>
   );
 };

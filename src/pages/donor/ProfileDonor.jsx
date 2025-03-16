@@ -83,7 +83,7 @@ const ProfileDonor = ({ donor }) => {
                     </div>
                 </div>
             </section>
-            <Footer />
+            {/* <Footer /> */}
         </div>
     );
 }

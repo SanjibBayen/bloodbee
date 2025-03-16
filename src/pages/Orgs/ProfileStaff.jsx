@@ -73,7 +73,6 @@ const ProfileStaff = ({ staffData }) => {
           </div>
         </div>
       </section>
-      <Footer />
     </div>
   );
 }

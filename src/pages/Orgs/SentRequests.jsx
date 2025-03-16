@@ -93,8 +93,8 @@ const SentRequests = ({ allDonors }) => {
       {/* End Pagination */}
 
       {/* Footer */}
-      <Footer />
-      {/* Footer */}
+      {/* <Footer /> */}
+     
     </div>
   );
 }

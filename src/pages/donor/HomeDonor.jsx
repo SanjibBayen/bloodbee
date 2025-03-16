@@ -95,7 +95,7 @@ const HomeDonor = ({ allDonors, successMessage }) => {
       </div>
 
       {/* Footer */}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

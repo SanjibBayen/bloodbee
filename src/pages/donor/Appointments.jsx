@@ -69,7 +69,7 @@ const Appointments = ({ allDonors }) => {
           </div>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

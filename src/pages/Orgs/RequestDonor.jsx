@@ -91,8 +91,8 @@ const RequestDonor = ({ allDonors}) => {
         </div>
       </div>
       {/* Footer */}
-      <Footer />
-      {/* Footer */}
+      {/* <Footer /> */}
+
     </div>
   );
 };

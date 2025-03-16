@@ -80,8 +80,8 @@ function AcceptRequests({ allDonors }) {
         </div>
       </div>
       {/* Footer */}
-      <Footer />
-      {/* Footer */}
+      {/* <Footer /> */}
+   
     </div>
   );
 }

@@ -74,7 +74,7 @@ const RequestDonorCreate = ({ donorDetails, staffemail }) => {
         </div>
       </section>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
