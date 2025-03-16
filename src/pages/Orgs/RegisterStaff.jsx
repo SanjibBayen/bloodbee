@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { lable, logo1 } from '../../assets/img';
+import { lable } from '../../assets/img';
 
 const RegisterStaff = () => {
   const handleSubmit = (event) => {

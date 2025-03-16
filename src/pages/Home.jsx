@@ -6,36 +6,27 @@ import "./Home.css";
 
 const Home = () => {
   return (
-    <div className="home">
+    <div className="home-container">
       {/* Navbar */}
       <NavbarHome />
-      
+
       {/* Main Content */}
-      <div className="container text-center p-4">
-        
-        {/* <h1 className="mt-2 text-muted fw-bold">
-          Welcome to <span className="text-danger">Blood</span>Bee
-        </h1> */}
-        
-        {/* Styled Hero Message */}
-        <div className="hero-message row d-flex justify-content-center align-items-center h-auto">
-          <p className="h1 text-muted">
-            One Blood Donation can save up to{" "}
-            <span className="text-danger fw-bold">Three</span> Lives
-          </p>
-            {/* Services Section */}
-        <div className="mt-4">
-          <Services />
-        </div>
+      <div className="home-content container text-center">
+        <h1 className="home-title">
+          One Blood Donation Can Save <span className="highlight">Three</span> Lives
+        </h1>
+
+        {/* Services & Blood Donation Side by Side */}
+        <div className="home-sections row">
+          <div className="col-md-6">
+            <Services />
+          </div>
+          <div className="col-md-6">
+            <BloodDonation />
+          </div>
         </div>
       </div>
 
-      
-      <div className="content"></div>
-      {/* Blood Donation Info Section */}
-      
-      <BloodDonation />
-      <div className="content"></div>
       {/* Footer */}
       <Footer />
     </div>

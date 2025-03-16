@@ -3,10 +3,9 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer className="text-center text-lg-start bg-body-tertiary text-muted">
-     
       <div className="text-center p-4" style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
-      <p>© {new Date().getFullYear()} Bloodbee. All rights reserved.</p>
-      <p>Made with ❤️ to save lives.</p>
+        <p>© {new Date().getFullYear()} Bloodbee. All rights reserved.</p>
+        <p>Made with ❤️ to save lives.</p>
       </div>
     </footer>
   );

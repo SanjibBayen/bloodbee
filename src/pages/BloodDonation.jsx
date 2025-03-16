@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./BloodDonation.css"; 
-import { personimg } from '../assets/img';
+import "./BloodDonation.css";
+import { personimg } from "../assets/img";
 
 const bloodCompatibility = {
   "A+": { donate: ["A+", "AB+"], receive: ["O+", "O-", "A+", "A-"] },
@@ -17,23 +17,21 @@ const bloodCompatibility = {
 const BloodDonation = () => {
   const [selectedType, setSelectedType] = useState("A+");
 
-  const handleSelection = (type) => {
-    setSelectedType(type);
-  };
-
   return (
-    <div className="container text-center mt-5 blood-donation-container">
-      <h2 className="text-danger fw-bold fs-1 text-muted"> <span className="text-danger fw-bold">Blood</span> Donation Guide</h2>
+    <div className="blood-donation-container text-center">
+      <h2 className="section-title">
+        <span className="text-danger fw-bold">Blood</span> Donation Guide
+      </h2>
 
       {/* Blood Type Selection */}
-      <div className="mb-4">
-        <p className="fw fs-5 justify-content-left">Select your Blood Type</p>
-        <div className="d-flex flex-wrap justify-content-center gap-3">
+      <div className="blood-type-selection">
+        <p>Select your Blood Type</p>
+        <div className="blood-type-buttons">
           {Object.keys(bloodCompatibility).map((type) => (
             <button
               key={type}
-              className={`btn btn-lg blood-btn custom-btn ${selectedType === type ? "active-btn" : ""}`}
-              onClick={() => handleSelection(type)}
+              className={`blood-btn ${selectedType === type ? "active-btn" : ""}`}
+              onClick={() => setSelectedType(type)}
             >
               {type}
             </button>
@@ -41,24 +39,20 @@ const BloodDonation = () => {
         </div>
       </div>
 
-      {/* Info Section */}
-      <div className="row mt-5 justify-content-center align-items-center blood-info-row">
+      {/* Donation & Receiving Info */}
+      <div className="blood-info-container">
         {/* Receiving Info */}
-        <div className="col-md-5">
-          <div className="p-4 rounded text-dark receive-box">
-            <img src={personimg} alt="Receiver" className="icon-img" />
-            <p className="fw-bold fs-3 text-muted">You can take from</p>
-            <p className="fs-5 text-muted fw-bold">{bloodCompatibility[selectedType].receive.join(" , ")}</p>
-          </div>
+        <div className="info-box receive-box">
+          <img src={personimg} alt="Receiver" className="icon-img" />
+          <p className="info-title">You can receive from:</p>
+          <p className="info-data">{bloodCompatibility[selectedType].receive.join(", ")}</p>
         </div>
 
         {/* Donation Info */}
-        <div className="col-md-5">
-          <div className="p-4 rounded text-white donate-box">
-            <img src={personimg} alt="Donor" className="icon-img" />
-            <p className="fw-bold fs-3 text-muted">You can give to</p>
-            <p className="fs-5 text-muted fw-bold">{bloodCompatibility[selectedType].donate.join(" , ")}</p>
-          </div>
+        <div className="info-box donate-box">
+          <img src={personimg} alt="Donor" className="icon-img" />
+          <p className="info-title">You can donate to:</p>
+          <p className="info-data">{bloodCompatibility[selectedType].donate.join(", ")}</p>
         </div>
       </div>
     </div>

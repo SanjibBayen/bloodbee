@@ -1,49 +1,47 @@
-// Navbar.jsx
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Dropdown } from './Elements';
 
-const Navbar = ({ username,homeColor,appointmentsColor,profileColor, }) => {
-    const defaultTextColor = "white"; 
-    const handleSubmit = (event) => {
-      event.preventDefault(); // Prevent the default form submission behavior
-  };
+const Navbar = ({ username, homeColor = 'white', appointmentsColor = 'white', profileColor = 'white' }) => {
   return (
-    <div>
-      <div className="text-center p-3 container-md">
-      </div>
-      <nav className="navbar navbar-expand-lg bg-primary">
-      <div className="container-fluid">
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow">
+      <div className="container">
+        <Link className="navbar-brand fw-bold text-white" to="/">Bloodbee</Link>
+        <button 
+          className="navbar-toggler" 
+          type="button" 
+          data-bs-toggle="collapse" 
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" 
+          aria-expanded="false" 
+          aria-label="Toggle navigation"
+        >
           <span className="navbar-toggler-icon"></span>
         </button>
+
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul className="navbar-nav me-auto">
             <li className="nav-item">
-              <Link className={`nav-link ps-3 pe-1 text-${homeColor || defaultTextColor}`} aria-current="page" to="/home-donor">
-                <i className="fa-solid fa-house p-1"></i>Home</Link>
+              <Link className={`nav-link text-${homeColor}`} to="/home-donor">
+                <i className="fa-solid fa-house p-1"></i> Home
+              </Link>
             </li>
             <li className="nav-item">
-              <Link className={`nav-link ps-3 pe-1 text-${appointmentsColor || defaultTextColor}`} to="/appointments-donor">
-                <i className="fa-solid fa-calendar-check p-1"></i>  Appointments
+              <Link className={`nav-link text-${appointmentsColor}`} to="/appointments-donor">
+                <i className="fa-solid fa-calendar-check p-1"></i> Appointments
               </Link>
             </li>
           </ul>
-          <ul className="navbar-nav ml-auto">
-              {/* Integrate the Dropdown component */}
-              <Dropdown username={username} defaultTextColor={defaultTextColor} profileColor={profileColor} profileRoute={'/profile-donor'}/>
-              <li className="nav-item">
-                <form className="d-flex ps-3 pe-1" role="search" onSubmit={handleSubmit}>
-                  <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                  <button className="btn btn-outline-success text-white" type="submit">Search</button>
-                </form>
-              </li>
-          </ul>
+
+          <form className="d-flex me-3">
+            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+            <button className="btn btn-light text-primary" type="submit">Search</button>
+          </form>
+
+          <Dropdown username={username} profileColor={profileColor} profileRoute={'/profile-donor'} />
         </div>
       </div>
     </nav>
-    </div>
   );
 };
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { lable, logo1 } from '../../assets/img';
+import { lable } from '../../assets/img';
 import { Link } from 'react-router-dom';
 
 function LoginStaff() {
@@ -44,7 +44,7 @@ function LoginStaff() {
                             <button name="login" className="btn btn-primary btn-lg">Login</button>
                           </div>
                           <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                            <p className="small mb-0">Don't have an account? <Link to="/register-staff">Create an account</Link></p>
+                            <p className="small mb-0">Dont have an account? <Link to="/register-staff">Create an account</Link></p>
                           </div>
                         </form>
                       </div>
