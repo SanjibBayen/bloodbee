@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Footer, Navigation } from '../../components/Elements';
+import { Footer, NavbarHome} from '../../components/Elements';
 
 function AcceptRequests({ allDonors }) {
   const [currentPage, setCurrentPage] = useState(1);
@@ -22,7 +22,7 @@ function AcceptRequests({ allDonors }) {
 
   return (
     <div>
-      <Navigation username={'Mike Junior'} acceptedRequestsColor={'primary'}/>
+      <NavbarHome />
 
       <div id="carouselExample" className="carousel">
         <div className="carousel-inner">

@@ -1,5 +1,5 @@
 import React from 'react';
-import { logo1,lable } from '../../assets/img';
+import { lable } from '../../assets/img';
 import { Link } from 'react-router-dom';
 
 const LoginDonor = () => {

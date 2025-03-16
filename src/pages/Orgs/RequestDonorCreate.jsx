@@ -1,5 +1,5 @@
 import React from 'react';
-import { Footer, Navigation } from '../../components/Elements';
+import { Footer,NavbarHome } from '../../components/Elements';
 import { splash1 } from '../../assets/img';
 
 const RequestDonorCreate = ({ donorDetails, staffemail }) => {
@@ -9,7 +9,7 @@ const RequestDonorCreate = ({ donorDetails, staffemail }) => {
     };
   return (
     <div>
-      <Navigation username={donor.full_name} homeColor={'primary'}/>
+      <NavbarHome />
 
       <div id="carouselExample" className="carousel">
         <div className="carousel-inner">

@@ -1,12 +1,12 @@
 import React from 'react';
-import { Navbar, Footer } from '../../components/Elements';
+import { NavbarHome, Footer } from '../../components/Elements';
 import { splash1 } from '../../assets/img';
 
 const ProfileDonor = ({ donor }) => {
     return (
         <div>
             {/* Navbar */}
-            <Navbar username={donor.full_name} profileColor={'primary'} />
+            <NavbarHome  />
 
             {/* Success alert */}
             {sessionStorage.getItem('success') &&

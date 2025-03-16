@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Navbar, Footer } from '../../components/Elements';
+import { NavbarHome, Footer } from '../../components/Elements';
 
 const Appointments = ({ allDonors }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -17,7 +17,7 @@ const Appointments = ({ allDonors }) => {
 
   return (
     <div>
-      <Navbar username="John Doe" appointmentsColor={'primary'} />
+      <NavbarHome />
       <div id="carouselExample" className="carousel">
         <div className="carousel-inner">
           {/* Add your carousel items here */}

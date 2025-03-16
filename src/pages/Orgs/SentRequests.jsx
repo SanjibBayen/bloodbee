@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Footer, Navigation } from '../../components/Elements';
+import { Footer, NavbarHome } from '../../components/Elements';
 
 const SentRequests = ({ allDonors }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -23,7 +23,7 @@ const SentRequests = ({ allDonors }) => {
   return (
     <div>
       {/* Navbar */}
-      <Navigation username={'Mike Junior'} sentRequestsColor={'primary'}/>
+      <NavbarHome />
       {/* End Navbar */}
       {/* Carousel */}
       <div id="carouselExample" className="carousel">

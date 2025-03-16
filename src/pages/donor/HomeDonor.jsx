@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Navbar, Footer } from '../../components/Elements';
+import { Footer } from '../../components/Elements';
 
 const HomeDonor = ({ allDonors, successMessage }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -23,7 +23,7 @@ const HomeDonor = ({ allDonors, successMessage }) => {
   return (
     <div>
       {/* Navbar */}
-      <Navbar username={'John Doe'} homeColor={'primary'} />
+      {/* <Navbar username={'John Doe'} homeColor={'primary'} /> */}
 
       {/* Success Message */}
       {successMessage && (

@@ -10,15 +10,14 @@ import Home from "./pages/Home";
 import { AcceptRequests, LoginStaff, ProfileStaff, RegisterStaff, RequestDonor, RequestDonorCreate, SentRequests } from "./pages/Orgs/Orgs";
 
 import { donorData, dummyData, acceptData, profileData, sampleData, tryData } from "./constraints/Data";
-import Navbar from "./components/Navbar";
-import NavbarHome from "./components/navbarHome"; // Import the special home navbar
+import NavbarHome from "./components/navbarHome"; 
 
 const Layout = () => {
   const location = useLocation(); // Get the current route
 
   return (
     <>
-      {location.pathname === "/" ? <NavbarHome /> : <Navbar />}
+      <NavbarHome />
       <div className="container-fluid p-3">
         <Routes>
           <Route path="/" element={<Home />} />
