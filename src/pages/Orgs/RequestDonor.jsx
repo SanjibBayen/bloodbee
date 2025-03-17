@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import ManageBloodRequests from './ManageBloodRequests';
 // import { FaTint, FaMapMarkerAlt, FaVenusMars, FaHeartbeat } from 'react-icons/fa';
 
 const RequestDonor = ({ allDonors }) => {
@@ -24,7 +25,7 @@ const RequestDonor = ({ allDonors }) => {
   return (
     <div>
       {/* <NavbarHome /> */}
-
+     
       <Container className="d-flex flex-wrap justify-content-center gap-3 py-4">
         {currentDonors.map(donor => (
           <Card key={donor.email} className="shadow-lg p-3 text-center" style={{ width: "18rem" }}>

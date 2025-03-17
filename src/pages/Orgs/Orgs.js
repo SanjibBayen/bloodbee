@@ -5,6 +5,7 @@ import RequestDonor from "./RequestDonor";
 import RequestDonorCreate from "./RequestDonorCreate";
 import SentRequests from "./SentRequests";
 import RegisterStaff from "./RegisterStaff";
+import ManageBloodRequests from "./ManageBloodRequests"; // Import ManageBloodRequests
 
 export {
     AcceptRequests,
@@ -14,4 +15,5 @@ export {
     RequestDonorCreate,
     SentRequests,
     RegisterStaff,
+    ManageBloodRequests, // Export ManageBloodRequests
 };

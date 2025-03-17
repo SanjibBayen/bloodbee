@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Button, Card } from "react-bootstrap";
+import { Link } from 'react-router-dom'; // Import Link
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -12,16 +13,18 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 // Reusable Card Component
-const InfoCard = ({ icon, title, text, buttonText }) => (
+const InfoCard = ({ icon, title, text, buttonText, link }) => (
   <Card className="text-center p-3 shadow-sm">
     <Card.Body>
       <FontAwesomeIcon icon={icon} size="3x" className="mb-3" style={{ color: "#ff4757" }} />
       <Card.Title>{title}</Card.Title>
       <Card.Text>{text}</Card.Text>
-      <Button variant="primary" style={{ backgroundColor: "#ff4757", borderColor: "#ff4757" }}>
-        <FontAwesomeIcon icon={icon} className="me-2" />
-        {buttonText}
-      </Button>
+      <Link to={link}>
+        <Button variant="primary" style={{ backgroundColor: "#ff4757", borderColor: "#ff4757" }}>
+          <FontAwesomeIcon icon={icon} className="me-2" />
+          {buttonText}
+        </Button>
+      </Link>
     </Card.Body>
   </Card>
 );
@@ -50,6 +53,7 @@ const BloodDonationUI = () => {
             title="Blood Requests"
             text="Emergency blood request."
             buttonText="Request Blood"
+            link="/manage-blood-requests" // Link to ManageBloodRequests
           />
         </Col>
         <Col md={4}>
@@ -58,6 +62,7 @@ const BloodDonationUI = () => {
             title="Donation History"
             text="View your past donation records."
             buttonText="View History"
+            link="/donation-history" // Example link, update as needed
           />
         </Col>
         <Col md={4}>
@@ -66,6 +71,7 @@ const BloodDonationUI = () => {
             title="Scheduled Appointments"
             text="Check your upcoming donation appointments."
             buttonText="View Schedule"
+            link="/scheduled-appointments" // Example link, update as needed
           />
         </Col>
       </Row>
@@ -77,6 +83,7 @@ const BloodDonationUI = () => {
             title="Notifications and Alerts"
             text="View notifications and alerts for upcoming appointments and urgent requests."
             buttonText="View Notifications"
+            link="/notifications" // Example link, update as needed
           />
         </Col>
         <Col md={4}>
@@ -85,6 +92,7 @@ const BloodDonationUI = () => {
             title="Nearby Blood Banks"
             text="Locate nearby blood banks and donation centers."
             buttonText="Find Blood Banks"
+            link="/nearby-blood-banks" // Example link, update as needed
           />
         </Col>
         <Col md={4}>
@@ -93,6 +101,7 @@ const BloodDonationUI = () => {
             title="Account Management"
             text="Edit and view profile settings."
             buttonText="Manage Account"
+            link="/account-management" // Example link, update as needed
           />
         </Col>
       </Row>

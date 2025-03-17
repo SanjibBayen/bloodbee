@@ -8,9 +8,9 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { Appointments, HomeDonor, ProfileDonor, LoginDonor, RegisterDonor, BloodDonationUI } from "./pages/donor/Donor";
 import Home from "./pages/Home";
 import BloodSearchResults from "./pages/BloodSearchResults"; // Import BloodSearchResults
-import { AcceptRequests, LoginStaff, ProfileStaff, RegisterStaff, RequestDonor, RequestDonorCreate, SentRequests } from "./pages/Orgs/Orgs";
+import { AcceptRequests, LoginStaff, ProfileStaff, RegisterStaff, RequestDonor, RequestDonorCreate, SentRequests, ManageBloodRequests } from "./pages/Orgs/Orgs"; // Import ManageBloodRequests
 
-import { donorData, dummyData, acceptData, profileData, sampleData, tryData } from "./constraints/Data";
+import { donorData, dummyData, acceptData, profileData, sampleData, tryData } from "./constraints/Data"; // Add acceptData
 import NavbarHome from "./components/navbarHome"; 
 import { Footer } from './components/Elements';
 
@@ -37,6 +37,7 @@ const Layout = () => {
           <Route path="/sent-requests" element={<SentRequests allDonors={tryData} />} />
           <Route path="/register-staff" element={<RegisterStaff />} />
           <Route path="/blood-search-results" element={<BloodSearchResults />} /> {/* Add route for BloodSearchResults */}
+          <Route path="/manage-blood-requests" element={<ManageBloodRequests />} /> {/* Add route for ManageBloodRequests */}
         </Routes>
       </div>
       {/* Footer */}
