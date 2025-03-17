@@ -6,27 +6,28 @@ import "./Home.css";
 const Home = () => {
   return (
     <div className="home-container">
-      {/* Navbar */}
-      {/* <NavbarHome /> */}
-
+      {/* DNA Background Pattern */}
+      <div className="dna-background"></div>
+      
       {/* Main Content */}
-      <div className="home-content container text-center">
-        <h1 className="home-title text-muted">
-          One Blood Donation Can Save <span className="highlight">Three</span> Lives
-        </h1>
+      <div className="home-content container">
+        <div className="hero-section">
+          <h1 className="home-title">
+            One Blood Donation Can Save <span className="highlight">Three</span> Lives
+          </h1>
+          <button className="donate-now-btn">Donate Now</button>
+        </div>
 
         {/* Services & Blood Donation Side by Side */}
-        <div className="home-sections row">
-          <div className="col-md-6">
+        <div className="home-sections">
+          <div className="section-card">
             <Services />
           </div>
-          <div className="col-md-6">
+          <div className="section-card">
             <BloodDonation />
           </div>
         </div>
       </div>
-
-    
     </div>
   );
 };

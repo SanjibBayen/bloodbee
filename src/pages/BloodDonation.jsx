@@ -18,9 +18,9 @@ const BloodDonation = () => {
   const [selectedType, setSelectedType] = useState("A+");
 
   return (
-    <div className="blood-donation-container text-center">
-      <h2 className="section-title">
-        <span className="text-danger fw-bold">Blood</span> Donation Guide
+    <div className="blood-donation-container">
+      <h2 className="blood-title">
+        <span className="text-danger">Blood</span> Donation Guide
       </h2>
 
       {/* Blood Type Selection */}
