@@ -11,7 +11,6 @@ const LoginDonor = () => {
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
 
-    // Hardcoded multiple user credentials
     const validCredentials = [
         { email: 'donor@example.com', password: 'donor123' },
         { email: 'john.doe@gmail.com', password: 'blooddonor' },
