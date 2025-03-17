@@ -8,7 +8,7 @@ import {
   faWarehouse, // Icon for Inventory Management
   faBell, // Icon for Notifications and Alerts
   faChartBar, // Icon for Reports and Analytics
-  faUserShield, // Icon for User Management
+  faUserShield, // Icon for User Management ttt
 } from "@fortawesome/free-solid-svg-icons";
 
 // Reusable Card Component
