@@ -1,5 +1,4 @@
 import React from "react";
-import { NavbarHome, Footer } from "../components/Elements";
 import Services from "../pages/Services";
 import BloodDonation from "../pages/BloodDonation";
 import "./Home.css";
