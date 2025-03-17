@@ -9,6 +9,7 @@ import { Appointments, HomeDonor, ProfileDonor, LoginDonor, RegisterDonor, Blood
 import Home from "./pages/Home";
 import BloodSearchResults from "./pages/BloodSearchResults"; // Import BloodSearchResults
 import { AcceptRequests, LoginStaff, ProfileStaff, RegisterStaff, RequestDonor, RequestDonorCreate, SentRequests, ManageBloodRequests } from "./pages/Orgs/Orgs"; // Import ManageBloodRequests
+import OrganizationDashboard from "./pages/Orgs/OrganizationDashboard"; // Import OrganizationDashboard
 
 import { donorData, dummyData, acceptData, profileData, sampleData, tryData } from "./constraints/Data"; // Add acceptData
 import NavbarHome from "./components/navbarHome"; 
@@ -38,6 +39,7 @@ const Layout = () => {
           <Route path="/register-staff" element={<RegisterStaff />} />
           <Route path="/blood-search-results" element={<BloodSearchResults />} /> {/* Add route for BloodSearchResults */}
           <Route path="/manage-blood-requests" element={<ManageBloodRequests />} /> {/* Add route for ManageBloodRequests */}
+          <Route path="/organization-dashboard" element={<OrganizationDashboard />} /> {/* Add route for OrganizationDashboard */}
         </Routes>
       </div>
       {/* Footer */}

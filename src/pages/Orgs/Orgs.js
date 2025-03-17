@@ -6,6 +6,7 @@ import RequestDonorCreate from "./RequestDonorCreate";
 import SentRequests from "./SentRequests";
 import RegisterStaff from "./RegisterStaff";
 import ManageBloodRequests from "./ManageBloodRequests"; // Import ManageBloodRequests
+import OrganizationDashboard from "./OrganizationDashboard"; // Import OrganizationDashboard
 
 export {
     AcceptRequests,
@@ -16,4 +17,5 @@ export {
     SentRequests,
     RegisterStaff,
     ManageBloodRequests, // Export ManageBloodRequests
+    OrganizationDashboard, // Export OrganizationDashboard
 };
