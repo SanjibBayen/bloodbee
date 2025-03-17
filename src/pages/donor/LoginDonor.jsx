@@ -54,7 +54,7 @@ const LoginDonor = () => {
                 // Redirect to donor dashboard
                 navigate('/BloodDonationUI');
             } else {
-                setError('Invalid email or password. Try using one of the demo accounts listed below.');
+                setError('Invalid email or password.');
             }
             setLoading(false);
         }, 800);
@@ -133,30 +133,6 @@ const LoginDonor = () => {
                                                     </div>
                                                     <div className="text-center mt-3">
                                                         <p>Don't have an account? <Link to="/register-donor" style={{ color: 'red' }}>Create an account</Link></p>
-                                                    </div>
-                                                    
-                                                    <div className="text-center mt-4">
-                                                        <p className="small text-muted mb-2">
-                                                            <strong>Demo accounts available:</strong>
-                                                        </p>
-                                                        <div className="table-responsive">
-                                                            <table className="table table-sm table-bordered">
-                                                                <thead>
-                                                                    <tr>
-                                                                        <th>Email</th>
-                                                                        <th>Password</th>
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                    {validCredentials.map((cred, index) => (
-                                                                        <tr key={index}>
-                                                                            <td>{cred.email}</td>
-                                                                            <td>{cred.password}</td>
-                                                                        </tr>
-                                                                    ))}
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
                                                     </div>
                                                 </form>
                                             </div>
