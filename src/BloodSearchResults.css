@@ -1,0 +1,30 @@
+.blood-search-results-container {
+  padding: 40px 20px;
+}
+
+.blood-search-results-container h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #dc3545;
+}
+
+.blood-search-results-container .form-control {
+  margin-bottom: 10px;
+}
+
+.blood-search-results-container .btn-danger {
+  background-color: #dc3545;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.blood-search-results-container .btn-danger:hover {
+  background-color: #a71d2a;
+}
+
+.blood-search-results-container .table {
+  margin-top: 20px;
+}

@@ -1,6 +1,8 @@
 import React from "react";
 import Services from "../pages/Services";
 import BloodDonation from "../pages/BloodDonation";
+import BloodSearch from "./bloodsearch"; // Adjusted 
+import { Link } from "react-router-dom";
 import "./Home.css";
 
 const Home = () => {
@@ -15,9 +17,11 @@ const Home = () => {
           <h1 className="home-title">
             One Blood Donation Can Save <span className="highlight">Three</span> Lives
           </h1>
-          <button className="donate-now-btn">Donate Now</button>
+          <Link to="/login-donor" className="donate-now-btn">Donate Now</Link>
         </div>
-
+        
+        <BloodSearch />
+        
         {/* Services & Blood Donation Side by Side */}
         <div className="home-sections">
           <div className="section-card">

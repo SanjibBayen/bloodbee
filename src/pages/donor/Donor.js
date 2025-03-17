@@ -3,6 +3,7 @@ import HomeDonor from "./HomeDonor";
 import LoginDonor from "./LoginDonor";
 import ProfileDonor from "./ProfileDonor";
 import RegisterDonor from "./RegisterDonor";
+import  BloodDonationUI  from './BloodDonationUI';
 
 export {
     Appointments,
@@ -10,4 +11,5 @@ export {
     LoginDonor,
     ProfileDonor,
     RegisterDonor,
+    BloodDonationUI,
 };

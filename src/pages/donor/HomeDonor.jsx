@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
-import { Footer } from '../../components/Elements';
+// import { Footer } from '../../components/Elements';
+import BloodDonationUI from '../donor/BloodDonationUI'; 
+
+
 
 const HomeDonor = ({ allDonors, successMessage }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -18,12 +21,13 @@ const HomeDonor = ({ allDonors, successMessage }) => {
   const handleSubmit = (event) => {
     event.preventDefault(); // Prevent the default form submission behavior
     // Optionally, you can add any other logic here, such as showing a message to the user
-};
+  };
 
   return (
     <div>
       {/* Navbar */}
       {/* <Navbar username={'John Doe'} homeColor={'primary'} /> */}
+      <BloodDonationUI />
 
       {/* Success Message */}
       {successMessage && (
@@ -58,11 +62,11 @@ const HomeDonor = ({ allDonors, successMessage }) => {
                   <div className="d-flex justify-content-between mt-3">
                     {/* Buttons for cancel and accept */}
                     <form onSubmit={handleSubmit}>
-                        <button className="btn btn-danger">Cancel</button>
-                      </form>
-                      <form onSubmit={handleSubmit}>
-                        <button className="btn btn-success">Accept</button>
-                      </form>
+                      <button className="btn btn-danger">Cancel</button>
+                    </form>
+                    <form onSubmit={handleSubmit}>
+                      <button className="btn btn-success">Accept</button>
+                    </form>
                   </div>
                 </div>
               </div>
@@ -94,8 +98,6 @@ const HomeDonor = ({ allDonors, successMessage }) => {
         </div>
       </div>
 
-      {/* Footer */}
-      {/* <Footer /> */}
     </div>
   );
 };

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Footer, NavbarHome } from '../../components/Elements';
+import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+// import { FaTint, FaMapMarkerAlt, FaVenusMars, FaHeartbeat } from 'react-icons/fa';
 
-const RequestDonor = ({ allDonors}) => {
+const RequestDonor = ({ allDonors }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const donorsPerPage = 8;
 
@@ -15,53 +16,49 @@ const RequestDonor = ({ allDonors}) => {
   // Change page
   const paginate = pageNumber => setCurrentPage(pageNumber);
 
-    const handleSubmit = (event) => {
-        event.preventDefault(); // Prevent the default form submission behavior
-        // Optionally, you can add any other logic here, such as showing a message to the user
-    };
+  const handleSubmit = (event) => {
+    event.preventDefault(); // Prevent the default form submission behavior
+    // Optionally, you can add any other logic here, such as showing a message to the user
+  };
 
   return (
     <div>
       {/* <NavbarHome /> */}
 
-      <div id="carouselExample" className="carousel">
-        <div className="carousel-inner">
-        </div>
-      </div>
-      <div className="container">
-        <div className="row">
-          {currentDonors.map(donor => (
-            <article className="col-md-4 col-lg-3" key={donor.email}>
-              <div className="card bg-light rounded-4 shadow">
-                <div className="card-body">
-                  <h5 className="card-title text-center text-uppercase mb-4 text-primary">Donor Information</h5>
-                  <ul className="list-unstyled">
-                    <li><strong>Name:</strong> {donor.full_name}</li>
-                    <li><strong>Gender:</strong> {donor.gender}</li>
-                    <li><strong>Location:</strong> {donor.address}</li>
-                    <li><strong>Blood Group:</strong> {donor.blood_type}</li>
-                    <li><strong>Health:</strong> {donor.status}</li>
-                  </ul>
-                  <div className="d-grid gap-2 mt-4">
-                    <form onSubmit={handleSubmit}>
-                      <input type="hidden" name="donor_email" value={donor.email} />
-                      <p className="card-text text-center">
-                        <button className="btn link-secondary">More...</button>
-                      </p>
-                    </form>
-                    <form onSubmit={handleSubmit}>
-                      <input type="hidden" name="donor_email" value={donor.email} />
-                      <p className="card-text text-center">
-                        <button className="btn btn-primary">Request</button>
-                      </p>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
-      </div> 
+      <Container className="d-flex flex-wrap justify-content-center gap-3 py-4">
+        {currentDonors.map(donor => (
+          <Card key={donor.email} className="shadow-lg p-3 text-center" style={{ width: "18rem" }}>
+            <div className="fs-1 text-danger">❤</div>
+            <Card.Body>
+              <Card.Title className="fw-bold">Donor Information</Card.Title>
+              <Card.Text>
+                 <strong>Name:</strong> {donor.full_name}
+              </Card.Text>
+              <Card.Text>
+                 <strong>Gender:</strong> {donor.gender}
+              </Card.Text>
+              <Card.Text>
+                <strong>Location:</strong> {donor.address}
+              </Card.Text>
+              <Card.Text>
+                 <strong>Blood Group:</strong> {donor.blood_type}
+              </Card.Text>
+              <Card.Text>
+                 <strong>Health:</strong> {donor.status}
+              </Card.Text>
+              <form onSubmit={handleSubmit}>
+                <input type="hidden" name="donor_email" value={donor.email} />
+                <Button variant="secondary" className="mb-2">More...</Button>
+              </form>
+              <form onSubmit={handleSubmit}>
+                <input type="hidden" name="donor_email" value={donor.email} />
+                <Button variant="primary">Request</Button>
+              </form>
+            </Card.Body>
+          </Card>
+        ))}
+      </Container>
+
       {/* Pagination links */}
       <div className="container">
         <div className="row">
@@ -92,7 +89,6 @@ const RequestDonor = ({ allDonors}) => {
       </div>
       {/* Footer */}
       {/* <Footer /> */}
-
     </div>
   );
 };

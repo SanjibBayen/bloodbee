@@ -5,8 +5,9 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import "bootstrap-icons/font/bootstrap-icons.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
-import { Appointments, HomeDonor, ProfileDonor, LoginDonor, RegisterDonor } from "./pages/donor/Donor";
+import { Appointments, HomeDonor, ProfileDonor, LoginDonor, RegisterDonor, BloodDonationUI } from "./pages/donor/Donor";
 import Home from "./pages/Home";
+import BloodSearchResults from "./pages/BloodSearchResults"; // Import BloodSearchResults
 import { AcceptRequests, LoginStaff, ProfileStaff, RegisterStaff, RequestDonor, RequestDonorCreate, SentRequests } from "./pages/Orgs/Orgs";
 
 import { donorData, dummyData, acceptData, profileData, sampleData, tryData } from "./constraints/Data";
@@ -25,6 +26,7 @@ const Layout = () => {
           <Route path="/appointments-donor" element={<Appointments allDonors={dummyData.allDonors} />} />
           <Route path="/home-donor" element={<HomeDonor allDonors={dummyData.allDonors} />} />
           <Route path="/login-donor" element={<LoginDonor />} />
+          <Route path="/BloodDonationUI" element={<BloodDonationUI />} /> {/* Corrected route */}
           <Route path="/register-donor" element={<RegisterDonor />} />
           <Route path="/profile-donor" element={<ProfileDonor donor={donorData} />} />
           <Route path="/accepted-requests" element={<AcceptRequests allDonors={acceptData} />} />
@@ -34,6 +36,7 @@ const Layout = () => {
           <Route path="/request-create" element={<RequestDonorCreate />} />
           <Route path="/sent-requests" element={<SentRequests allDonors={tryData} />} />
           <Route path="/register-staff" element={<RegisterStaff />} />
+          <Route path="/blood-search-results" element={<BloodSearchResults />} /> {/* Add route for BloodSearchResults */}
         </Routes>
       </div>
       {/* Footer */}

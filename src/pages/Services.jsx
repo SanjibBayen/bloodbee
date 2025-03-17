@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import "./Services.css"; // Import custom styles
 
 const services = [
-  { name: "Blood Availability", image: bloodsearch, link: "/home-donor" },
+  { name: "Blood Donation Camps", image: bloodsearch, link: "/home-donor" },
   { name: "Organization Login", image: blooddirectory, link: "/login-staff" },
   { name: "Donor Login", image: donorlogin, link: "/login-donor" }
 ];
@@ -16,9 +16,9 @@ const Services = () => {
       <Container>
         <Row className="justify-content-center">
           {services.map((service, index) => (
-            <Col key={index} xs={12} sm={6} md={4} className="d-flex justify-content-center">
+            <Col key={index} xs={12} sm={6} md={4} className="d-flex justify-content-center mb-4">
               <Card className="service-card">
-                <Card.Img variant="top" src={service.image} alt={service.name} />
+                <Card.Img variant="top" src={service.image} alt={service.name} className="service-image" />
                 <Card.Body className="d-flex flex-column align-items-center">
                   <Link to={service.link} className="btn service-btn">
                     {service.name}

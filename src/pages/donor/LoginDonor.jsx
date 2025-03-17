@@ -1,6 +1,6 @@
 import React from 'react';
 import { lable } from '../../assets/img';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'; // Corrected import
 
 const LoginDonor = () => {
     const handleSubmit = (event) => {
@@ -50,7 +50,7 @@ const LoginDonor = () => {
                                                 </form>
                                             </div>
                                             <div className="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
-                                                <Link to={'/home-donor'}>
+                                                <Link to={'/BloodDonationUI'}>
                                                     <img src={lable} className="img-fluid rounded-4" alt="Sample image" />
                                                 </Link>
                                             </div>
