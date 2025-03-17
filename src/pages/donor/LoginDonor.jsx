@@ -38,19 +38,15 @@ const LoginDonor = () => {
         setLoading(true);
         setError('');
         
-        // Simulate API call with timeout
         setTimeout(() => {
-            // Check if provided credentials match any of the valid credentials
             const validUser = validCredentials.find(
                 user => user.email === formData.email && user.password === formData.password
             );
             
             if (validUser) {
-                // Store login state in localStorage or sessionStorage
                 localStorage.setItem('donorLoggedIn', 'true');
                 localStorage.setItem('donorEmail', formData.email);
                 
-                // Redirect to donor dashboard
                 navigate('/BloodDonationUI');
             } else {
                 setError('Invalid email or password.');
@@ -81,8 +77,9 @@ const LoginDonor = () => {
                                                 )}
                                                 
                                                 <form className="mx-1 mx-md-4" onSubmit={handleSubmit}>
-                                                    <div className="mb-4">
-                                                        <label htmlFor="email" className="form-label">Email</label>
+                                                    {/* Email Field with Icon */}
+                                                    <div className="mb-4 input-group">
+                                                        <span className="input-group-text"><i className="fas fa-envelope"></i></span>
                                                         <input 
                                                             type="email" 
                                                             name="email" 
@@ -94,8 +91,10 @@ const LoginDonor = () => {
                                                             required 
                                                         />
                                                     </div>
-                                                    <div className="mb-4">
-                                                        <label htmlFor="password" className="form-label">Password</label>
+
+                                                    {/* Password Field with Icon */}
+                                                    <div className="mb-4 input-group">
+                                                        <span className="input-group-text"><i className="fas fa-lock"></i></span>
                                                         <input 
                                                             type="password" 
                                                             name="password" 
@@ -107,6 +106,7 @@ const LoginDonor = () => {
                                                             required 
                                                         />
                                                     </div>
+
                                                     <div className="form-check d-flex justify-content-center mb-4">
                                                         <input 
                                                             className="form-check-input me-2" 
