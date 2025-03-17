@@ -1,11 +1,56 @@
 import React, { useState } from 'react';
 import { lable } from '../../assets/img';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate
 
 function LoginStaff() {
+  const [formData, setFormData] = useState({
+    email: '',
+    password: '',
+    agreeTerms: false
+  });
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate(); // Initialize navigate
+
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData({
+      ...formData,
+      [name]: type === 'checkbox' ? checked : value
+    });
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
-};
+    setLoading(true);
+    setError('');
+
+    // Simulate API call with timeout
+    setTimeout(() => {
+      // Check if provided credentials match any of the valid credentials
+      const validCredentials = [
+        { email: 'staff@example.com', password: 'staff123' },
+        { email: 'admin@bloodbank.org', password: 'admin123' }
+      ];
+
+      const validUser = validCredentials.find(
+        user => user.email === formData.email && user.password === formData.password
+      );
+
+      if (validUser) {
+        // Store login state in localStorage or sessionStorage
+        localStorage.setItem('staffLoggedIn', 'true');
+        localStorage.setItem('staffEmail', formData.email);
+
+        // Redirect to organization dashboard
+        navigate('/organization-dashboard');
+      } else {
+        setError('Invalid email or password.');
+      }
+      setLoading(false);
+    }, 800);
+  };
+
   return (
     <div>
       <div className="text-center p-3 container-md">
