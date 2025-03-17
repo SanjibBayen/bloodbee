@@ -1,10 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+
 
 const LoginDonor = () => {
+    const navigate = useNavigate();
+
     const handleSubmit = (event) => {
         event.preventDefault();
         // Additional login logic can be added here
+
+        // Navigate to the OrganizationDashboard
+        navigate('/organization-dashboard');
     };
 
     return (
@@ -59,7 +65,7 @@ const LoginDonor = () => {
                                                 </form>
                                             </div>
                                             <div className="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
-                                                <Link to='/BloodDonationUI'>
+                                                <Link to='/organization-dashboard'>
                                                     <img 
                                                         src="https://img.freepik.com/premium-vector/blood-donor-day-illustration-with-blood-drip_95561-345.jpg?semt=ais_hybrid" 
                                                         className="img-fluid rounded-4" 
@@ -76,6 +82,7 @@ const LoginDonor = () => {
                     </div>
                 </section>
             </div>
+         
         </div>
     );
 };
