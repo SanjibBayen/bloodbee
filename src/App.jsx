@@ -5,7 +5,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import "bootstrap-icons/font/bootstrap-icons.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
-import { Appointments, HomeDonor, ProfileDonor, LoginDonor, RegisterDonor, BloodDonationUI } from "./pages/donor/Donor";
+import { Appointments, HomeDonor, ProfileDonor, LoginDonor, RegisterDonor, BloodDonationUI, DonationHistory, ScheduledAppointments, Notifications, AccountManagement, NearbyBloodBanks } from "./pages/donor/Donor";
 import Home from "./pages/Home";
 import BloodSearchResults from "./pages/BloodSearchResults"; // Import BloodSearchResults
 import { AcceptRequests, LoginStaff, ProfileStaff, RegisterStaff, RequestDonor, RequestDonorCreate, SentRequests, ManageBloodRequests } from "./pages/Orgs/Orgs"; // Import ManageBloodRequests
@@ -40,6 +40,11 @@ const Layout = () => {
           <Route path="/blood-search-results" element={<BloodSearchResults />} /> {/* Add route for BloodSearchResults */}
           <Route path="/manage-blood-requests" element={<ManageBloodRequests />} /> {/* Add route for ManageBloodRequests */}
           <Route path="/organization-dashboard" element={<OrganizationDashboard />} /> {/* Add route for OrganizationDashboard */}
+          <Route path="scheduled-appointments" element={<ScheduledAppointments />} />
+          <Route path="notifications" element={<Notifications />} />
+          <Route path="donation-history" element={<DonationHistory />} />
+          <Route path="nearby-blood-banks" element={<NearbyBloodBanks />} />
+          <Route path="account-management" element={<AccountManagement />} />
         </Routes>
       </div>
       {/* Footer */}

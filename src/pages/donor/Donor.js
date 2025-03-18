@@ -4,6 +4,12 @@ import LoginDonor from "./LoginDonor";
 import ProfileDonor from "./ProfileDonor";
 import RegisterDonor from "./RegisterDonor";
 import  BloodDonationUI  from './BloodDonationUI';
+import DonationHistory from './DonationHistory';
+import ScheduledAppointments from "./scheduledAppointment";
+import Notifications from "./notiAlerts";
+import NearbyBloodBanks from "./bloodBank";
+import AccountManagement from "./accnMgmt";
+
 
 export {
     Appointments,
@@ -12,4 +18,9 @@ export {
     ProfileDonor,
     RegisterDonor,
     BloodDonationUI,
+    DonationHistory,
+    ScheduledAppointments,
+    Notifications,
+    NearbyBloodBanks,
+    AccountManagement,
 };
