@@ -15,8 +15,8 @@ const LoginDonor = () => {
         { email: 'donor@example.com', password: 'donor123' },
         { email: 'john.doe@gmail.com', password: 'blooddonor' },
         { email: 'sarah.smith@example.com', password: 'donate2024' },
-        { email: 'admin@bloodbank.org', password: 'admin123' },
-        { email: 'test@test.com', password: 'test123' }
+        { email: 'nirmalya03561@gmail.com', password: '123123' },
+        { email: 'sanjibbayen11@gmail.com', password: '123123' }
     ];
 
     const handleChange = (e) => {
