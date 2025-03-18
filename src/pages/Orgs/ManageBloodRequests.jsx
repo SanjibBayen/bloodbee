@@ -78,7 +78,7 @@ const ManageBloodRequests = () => {
           <Modal.Footer>
             <Button variant="secondary" onClick={handleCloseModal}>Close</Button>
             <Button variant="danger" onClick={handleReject}>Reject</Button>
-            <Button variant="success" onClick={handleApprove}>Approve</Button>
+            <Button variant="success" onClick={handleApprove}>Accept</Button>
           </Modal.Footer>
         </Modal>
       )}
