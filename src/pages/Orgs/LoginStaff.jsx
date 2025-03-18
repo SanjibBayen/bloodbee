@@ -60,7 +60,7 @@ const LoginDonor = () => {
                                                         <button type="submit" className="btn btn-primary btn-lg">Login</button>
                                                     </div>
                                                     <div className="text-center mt-3">
-                                                        <p>Don't have an account? <Link to="/register-donor" style={{ color: 'red' }}>Create an account</Link></p>
+                                                        <p>Don't have an account? <Link to="/register-staff" style={{ color: 'red' }}>Create an account</Link></p>
                                                     </div>
                                                 </form>
                                             </div>

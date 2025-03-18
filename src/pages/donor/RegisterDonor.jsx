@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { lable } from '../../assets/img'; 
 import { Link } from 'react-router-dom';
+import "bootstrap/dist/css/bootstrap.min.css";
+import { FaUser, FaEnvelope, FaPhone, FaLock, FaTint, FaBirthdayCake, FaMapMarkerAlt, FaVenusMars } from 'react-icons/fa';
 
 const RegisterDonor = () => {
   const [formData, setFormData] = useState({
@@ -31,61 +33,91 @@ const RegisterDonor = () => {
   };
 
   return (
-    <div className="container-md text-center p-3">
-      <div className="text-center bg-image align-items-center">
-        <section>
-          <div className="container h-100">
-            <div className="row d-flex justify-content-center align-items-center h-100">
-              <div className="col-lg-12 col-xl-11">
-                <div className="card text-black" style={{ borderRadius: "25px" }}>
-                  <div className="card-body p-md-5">
-                    <div className="row justify-content-center">
-                      <div className="col-md-10 col-lg-6 col-xl-5">
-                        <p className="text-center h1 fw-bold mb-5">Blood Donor Register</p>
-                        <form className="mx-1 mx-md-4" onSubmit={handleSubmit}>
-                          {Object.keys(formData).map((key) => (
-                            key !== 'agreeTerms' && (
-                              <div className="d-flex flex-row align-items-center mb-4" key={key}>
-                                <input 
-                                  type={key.includes('password') ? 'password' : key === 'phone' ? 'number' : 'text'}
-                                  name={key}
-                                  value={formData[key]}
-                                  onChange={handleChange}
-                                  className="form-control"
-                                  placeholder={`Your ${key.replace('_', ' ')}`}
-                                />
-                              </div>
-                            )
-                          ))}
-                          <div className="form-check d-flex justify-content-center mb-5">
-                            <input className="form-check-input me-2" 
-                              type="checkbox" 
-                              name="agreeTerms" 
-                              checked={formData.agreeTerms} 
-                              onChange={handleChange} 
-                            />
-                            <label className="form-check-label">
-                              I agree to all statements in <a href="#">Terms of service</a>
-                            </label>
-                          </div>
-                          <div className="d-flex justify-content-center">
-                            <button className="btn btn-primary btn-lg">Register</button>
-                          </div>
-                          <div className="d-flex justify-content-center mt-3">
-                            <p>Already have an account? <Link to="/login-donor">Login here</Link></p>
-                          </div>
-                        </form>
-                      </div>
-                      <div className="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center">
-                        <img src={lable} className="img-fluid rounded-4" alt="Sample" />
-                      </div>
+    <div className="container py-5">
+      <div className="row justify-content-center">
+        <div className="col-lg-10">
+          <div className="card shadow-lg p-4" style={{ borderRadius: "20px" }}>
+            <div className="row">
+              
+              {/* Left Section - Form */}
+              <div className="col-md-6">
+              <h2 className="text-center fw-bold mb-4">
+  <span className="text-danger">Blood</span> Donor Register
+</h2>
+
+                <form onSubmit={handleSubmit}>
+
+                  {/* Input Fields with Icons */}
+                  {[
+                    { name: 'name', placeholder: 'Full Name', icon: <FaUser /> },
+                    { name: 'username', placeholder: 'Username', icon: <FaUser /> },
+                    { name: 'email', placeholder: 'Email', icon: <FaEnvelope /> },
+                    { name: 'phone', placeholder: 'Phone Number', icon: <FaPhone /> },
+                    { name: 'address', placeholder: 'Address', icon: <FaMapMarkerAlt /> },
+                    { name: 'blood_type', placeholder: 'Blood Type', icon: <FaTint /> },
+                    { name: 'birthdate', placeholder: 'Date of Birth', icon: <FaBirthdayCake />, type: 'date' },
+                    { name: 'gender', placeholder: 'Gender (M/F)', icon: <FaVenusMars /> },
+                    { name: 'password', placeholder: 'Password', icon: <FaLock />, type: 'password' },
+                    { name: 'password_confirmation', placeholder: 'Confirm Password', icon: <FaLock />, type: 'password' }
+                  ].map(({ name, placeholder, icon, type = 'text' }) => (
+                    <div className="input-group mb-3" key={name}>
+                      <span className="input-group-text bg-danger text-white">{icon}</span>
+                      <input 
+                        type={type}
+                        name={name}
+                        value={formData[name]}
+                        onChange={handleChange}
+                        className="form-control"
+                        placeholder={placeholder}
+                        required
+                      />
                     </div>
+                  ))}
+
+                  {/* Agree to Terms */}
+                  <div className="form-check d-flex justify-content-center mb-3">
+                    <input 
+                      className="form-check-input me-2"
+                      type="checkbox" 
+                      name="agreeTerms" 
+                      checked={formData.agreeTerms} 
+                      onChange={handleChange} 
+                      required
+                    />
+                    <label className="form-check-label">
+  I agree to all statements in <Link to="#" className="text-danger">Terms of Service</Link>
+</label>
+
                   </div>
-                </div>
+
+                  {/* Submit Button */}
+                  <div className="text-center">
+                    <button type="submit" className="btn btn-danger btn-lg w-100">
+                      Register
+                    </button>
+                  </div>
+
+                  {/* Login Redirect */}
+                  <div className="text-center mt-3">
+                    <p>Already have an account? <Link to="/login-donor" className="text-danger">Login here</Link></p>
+                  </div>
+
+                </form>
+              </div> {/* End Left Section */}
+
+              {/* Right Section - Image */}
+              <div className="col-md-6 d-flex align-items-center justify-content-center">
+              <img 
+  src="https://sbtcup.org/ImageNew/component.jpg" 
+  className="img-fluid rounded-4" 
+  alt="Blood Donation" 
+  style={{ maxHeight: "450px" }} 
+/>
               </div>
-            </div>
-          </div>
-        </section>
+
+            </div> {/* End Row */}
+          </div> {/* End Card */}
+        </div>
       </div>
     </div>
   );
