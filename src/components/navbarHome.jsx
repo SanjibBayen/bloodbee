@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const NavbarHome = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow">
-      <div className="container d-flex flex-row align-items-center">
+      <div className="container">
         {/* Logo */}
         <Link className="navbar-brand fw-bold text-white" to="/">
           <i className="bi bi-droplet-fill me-2"></i>LifeFlow
@@ -24,29 +24,36 @@ const NavbarHome = () => {
         </button>
 
         {/* Navigation Links */}
-        <div className="collapse navbar-collapse justify-content-center " id="navbarNav">
+        <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
               <Link className="nav-link text-white" to="/">
-                <i className="fa-solid fa-house me-1"></i> Home
+                <i className="bi bi-house-door-fill me-1"></i> Home
               </Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link text-white" to="/donate">
-                <i className="fa-solid fa-hand-holding-heart me-1"></i> Donate
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link text-white" to="/requests">
-                <i className="fa-solid fa-list me-1"></i> Blood Requests
-              </Link>
-            </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link className="nav-link text-white" to="/about">
-                <i class="fa-solid fa-info-circle me-1"></i> About
+                <i className="bi bi-info-circle-fill me-1"></i> About
+              </Link>
+            </li> */}
+            <li className="nav-item">
+              <Link className="nav-link text-white" to="/home-donor">
+                <i className="bi bi-calendar-heart-fill me-1"></i> Blood Camps
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link text-white" to="/nearby-blood-banks">
+                <i className="bi bi-geo-alt-fill me-1"></i> Blood Banks
               </Link>
             </li>
           </ul>
+        </div>
+
+        {/* Donate Blood Button */}
+        <div className="d-flex">
+          <Link className="btn btn-light text-danger fw-bold px-3" to="/login-donor">
+            <i className="bi bi-heart-pulse-fill me-1"></i> Donate Blood
+          </Link>
         </div>
       </div>
     </nav>

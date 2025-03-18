@@ -7,6 +7,9 @@ import SentRequests from "./SentRequests";
 import RegisterStaff from "./RegisterStaff";
 import ManageBloodRequests from "./ManageBloodRequests"; // Import ManageBloodRequests
 import OrganizationDashboard from "./OrganizationDashboard"; // Import OrganizationDashboard
+import DonorAppointment from "./DonorAppointment"; // Import DonorAppointment
+import InventoryManagement from "./InventoryManagement"; // Import InventoryManagement
+import ReportsAndAnalytics from "./ReportsAndAnalytics"; // Import ReportsAndAnalytics
 
 export {
     AcceptRequests,
@@ -18,4 +21,7 @@ export {
     RegisterStaff,
     ManageBloodRequests, // Export ManageBloodRequests
     OrganizationDashboard, // Export OrganizationDashboard
+    DonorAppointment, // Export DonorAppointment
+    InventoryManagement, // Export InventoryManagement
+    ReportsAndAnalytics, // Export ReportsAndAnalytics
 };

@@ -35,14 +35,14 @@ const BloodDonationUI = () => {
       {/* Header Section */}
       <div className="bg-danger text-white p-3 rounded d-flex align-items-center justify-content-center w-100">
         <div className="heart-container me-3">
-          <div className="heart"></div>
-          <div className="heart half"></div>
+          {/* <div className="heart"></div>
+          <div className="heart half"></div> */}
         </div>
-        <h4 className="mb-0 text-center">
+        {/* <h4 className="mb-0 text-center">
           Save Life
           <br />
           Give Blood
-        </h4>
+        </h4> */}
       </div>
 
       {/* Options Section */}
@@ -101,7 +101,7 @@ const BloodDonationUI = () => {
             title="Account Management"
             text="Edit and view profile settings."
             buttonText="Manage Account"
-            link="/account-management" // Example link, update as needed
+            link="/profile-donor" // Example link, update as needed
           />
         </Col>
       </Row>

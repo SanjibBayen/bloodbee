@@ -43,7 +43,7 @@ const ProfileStaff = ({ staffData }) => {
               <p className="text-muted"><FaMapMarkerAlt className="me-2" />{staffData.address}</p>
               <p><strong>Joined:</strong> {staffData.joining_date}</p>
 
-              <span className={`badge ${isActive ? "bg-success" : "bg-danger"} p-2 w-auto`}>
+              <span className={`badge ${isActive ? "bg-success" : "bg-danger"} p-2 w-50px`}>
   {isActive ? "Active" : "Deactivated"}
 </span>
 

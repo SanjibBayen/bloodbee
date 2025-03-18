@@ -36,9 +36,9 @@ const DonationHistory = () => {
                           ))}
                         </div>
                         <div className="d-flex justify-content-center mt-4">
-                          <Link to="/">
+                          {/* <Link to="/">
                             <button className="btn btn-danger btn-lg">Back to Home</button>
-                          </Link>
+                          </Link> */}
                         </div>
                       </div>
                     </div>

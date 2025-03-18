@@ -28,6 +28,8 @@ const ManageBloodRequests = () => {
 
   return (
     <Container className="py-4">
+      <h1 className="text-center text-primary mt-5">Manage Blood Requests</h1> {/* Added heading here */}
+      <h2 className="text-center text-secondary mb-4">Review and manage blood donation requests</h2> {/* Added subheading here */}
       <Row className="d-flex justify-content-center">
         {acceptData.map(request => (
           <Col md={4} key={request.request_id} className="mb-4">

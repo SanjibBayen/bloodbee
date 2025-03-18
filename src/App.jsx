@@ -8,10 +8,9 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { Appointments, HomeDonor, ProfileDonor, LoginDonor, RegisterDonor, BloodDonationUI, DonationHistory, ScheduledAppointments, Notifications, AccountManagement, NearbyBloodBanks } from "./pages/donor/Donor";
 import Home from "./pages/Home";
 import BloodSearchResults from "./pages/BloodSearchResults"; // Import BloodSearchResults
-import { AcceptRequests, LoginStaff, ProfileStaff, RegisterStaff, RequestDonor, RequestDonorCreate, SentRequests, ManageBloodRequests } from "./pages/Orgs/Orgs"; // Import ManageBloodRequests
-import OrganizationDashboard from "./pages/Orgs/OrganizationDashboard"; // Import OrganizationDashboard
+import { AcceptRequests, LoginStaff, ProfileStaff, RegisterStaff, RequestDonor, RequestDonorCreate, SentRequests, ManageBloodRequests, OrganizationDashboard, DonorAppointment, InventoryManagement, ReportsAndAnalytics } from "./pages/Orgs/Orgs"; // Import all necessary components
 
-import { donorData, dummyData, acceptData, profileData, sampleData, tryData } from "./constraints/Data"; // Add acceptData
+import { donorData, dummyData, acceptData, profileData, sampleData, tryData, inventoryData } from "./constraints/Data"; // Add inventoryData
 import NavbarHome from "./components/navbarHome"; 
 import { Footer } from './components/Elements';
 
@@ -40,6 +39,9 @@ const Layout = () => {
           <Route path="/blood-search-results" element={<BloodSearchResults />} /> {/* Add route for BloodSearchResults */}
           <Route path="/manage-blood-requests" element={<ManageBloodRequests />} /> {/* Add route for ManageBloodRequests */}
           <Route path="/organization-dashboard" element={<OrganizationDashboard />} /> {/* Add route for OrganizationDashboard */}
+          <Route path="/donor-appointment" element={<DonorAppointment acceptedDonors={acceptData} />} /> {/* Add route for DonorAppointment */}
+          <Route path="/orgs/InventoryManagement" element={<InventoryManagement inventoryData={inventoryData} />} /> {/* Add route for InventoryManagement */}
+          <Route path="/ReportsAndAnalytics" element={<ReportsAndAnalytics />} /> {/* Add route for ReportsAndAnalytics */}
           <Route path="scheduled-appointments" element={<ScheduledAppointments />} />
           <Route path="notifications" element={<Notifications />} />
           <Route path="donation-history" element={<DonationHistory />} />

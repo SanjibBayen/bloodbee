@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import "./Services.css"; // Import custom styles
 
 const services = [
-  { name: "Blood Donation Camps", image: bloodsearch, link: "/home-donor" },
+  { name: "Blood  Camps", image: bloodsearch, link: "/home-donor" },
   { name: "Organization Login", image: blooddirectory, link: "/login-staff" },
   { name: "Donor Login", image: donorlogin, link: "/login-donor" }
 ];

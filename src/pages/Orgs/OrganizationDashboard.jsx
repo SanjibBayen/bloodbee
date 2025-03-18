@@ -51,7 +51,7 @@ const OrganizationDashboard = () => {
             title="Donor Appointment" 
             text="Schedule donation appointments." 
             buttonText="Schedule Appointments" 
-            onClick={() => navigate('/orgs/DonorAppointment')} 
+            onClick={() => navigate('/donor-appointment')} 
           />
         </Col>
         <Col md={4}>
@@ -65,20 +65,11 @@ const OrganizationDashboard = () => {
         </Col>
         <Col md={4}>
           <InfoCard 
-            icon={faBell} 
-            title="Notifications and Alerts" 
-            text="Send notifications and alerts." 
-            buttonText="View Notifications" 
-            onClick={() => navigate('/orgs/Notifications')} 
-          />
-        </Col>
-        <Col md={4}>
-          <InfoCard 
             icon={faChartBar} 
             title="Reports and Analytics" 
             text="Generate reports and view analytics." 
             buttonText="View Reports" 
-            onClick={() => navigate('/orgs/Reports')} 
+            onClick={() => navigate('/ReportsAndAnalytics')} 
           />
         </Col>
         <Col md={4}>
